@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11131c">
+<meta name="description" content="Архив 1993 года. Цены, объявления, фотографии, бюллетени и кинохроника с первоисточниками."><title>Эфир 1993 · Куплю, продам</title>
+<link rel="stylesheet" href="screen.css">
+<link rel="stylesheet" href="daily.css">
+<link rel="stylesheet" href="library.css">
+</head>
+<body data-finish="aged">
+<main class="receiver" aria-label="Эфир 1993">
+  <div class="glass">
+    <header class="station">
+      <button class="station-home" type="button" aria-label="Эфир 1993 — открыть выпуск «Куплю, продам»"><img class="brand" src="assets/webp-1707a3e55397.webp" alt="Эфир 1993"></button>
+      <nav class="sections" aria-label="Разделы">
+        <button class="nav-control" type="button" data-view="byt" aria-current="page"><span class="channel-number">510</span><span>Быт</span></button>
+        <button class="nav-control" type="button" data-view="evening"><span class="channel-number">410</span><span>Вечер</span></button>
+        <button class="nav-control" type="button" data-view="issue"><span class="channel-number">200</span><span>Октябрь</span></button>
+        <button class="nav-control" type="button" data-view="catalog"><span class="channel-number">100</span><span>Архив</span></button>
+        <button class="nav-control" type="button" data-view="media"><span class="channel-number">700</span><span>Медиатека</span></button>
+        <button class="nav-control" type="button" data-view="tape"><span class="channel-number">900</span><span>Моя кассета</span></button>
+      </nav>
+      <div class="station-tools">
+        <button class="nav-control" type="button" id="open-search" aria-label="Поиск по архиву"><span class="magnify" aria-hidden="true"></span><span class="search-text">Поиск</span></button>
+        <details class="page-switch"><summary aria-label="Номер страницы и настройки экрана" title="Перейти к странице или настроить оформление"><span id="page-code">P510</span><i aria-hidden="true"></i></summary>
+          <div class="page-settings"><form class="jumpbox" id="jump"><label for="jump-code">Перейти к странице</label><div class="jump-slot"><span aria-hidden="true">P</span><input id="jump-code" type="text" inputmode="numeric" pattern="[0-9]{3}" maxlength="3" placeholder="···" autocomplete="off" aria-label="Трёхзначный номер страницы"><button class="jump-go" type="submit" aria-label="Перейти к странице">↵</button></div></form><div class="finish-controls" role="group" aria-label="Оформление"><button id="finish-btn" type="button" aria-pressed="true">Следы времени</button><button id="raster-btn" type="button" aria-pressed="true">Растр экрана</button></div></div>
+        </details>
+      </div>
+    </header>
+    <div class="mast"><h1 id="mast-title">Октябрь 1993</h1></div>
+    <section id="byt-front" aria-label="Куплю, продам" hidden></section>
+    <section id="media-shelf" aria-label="Медиатека" hidden></section>
+    <section id="evening-front" aria-label="Свободный вечер" hidden></section>
+    <section id="issue-front" aria-label="Октябрьский выпуск" hidden></section>
+<section class="pane hand-register" id="browse" aria-labelledby="mast-title">
+      <div class="contents" id="issue-contents">
+        <div class="contents-head"><span id="list-count"></span></div>
+        <div id="filterbar" hidden><input id="query" type="search" autocomplete="off" placeholder="Тема, место, номер…" aria-label="Поиск по архиву"><select id="type" aria-label="Вид материала"><option value="all">Все виды</option><option value="photo">Фото</option><option value="video">Видео</option><option value="press">Пресса</option><option value="document">Документы</option><option value="artifact">Предметы</option></select></div>
+        <ul id="record-list" aria-labelledby="mast-title"></ul>
+        <div id="empty-state" hidden><p id="empty-text"></p><button type="button" id="empty-action">Открыть архив</button></div>
+        <span class="keyboard" hidden></span>
+      </div>
+    </section>
+    <article id="reader" class="pane" aria-labelledby="reader-title" hidden>
+      <div class="reader-top"><button id="reader-back" type="button">← К выпуску</button><button id="reader-save" class="key secondary" type="button">На кассету</button></div>
+      <div class="story-sheet">
+        <header class="reader-intro"><div class="meta"><span id="reader-kind" class="eyebrow"></span><span id="reader-date"></span></div><h1 id="reader-title" tabindex="-1"></h1><p id="reader-summary"></p></header>
+        <div class="reader-object"><figure id="reader-media" hidden></figure><div id="object-tool"><button type="button" id="reader-scan" class="key">Увеличить</button></div></div>
+        <div id="reader-line"></div>
+        <div class="reader-text"><div id="reader-detail"></div><blockquote id="reader-quote" hidden></blockquote><div id="reader-related"></div></div>
+        <aside class="source-notes"><div id="source-original"></div><details id="source-disclosure"><summary id="source-toggle">Выходные данные и ссылки</summary><p id="reader-source"></p><div id="reader-links"></div></details></aside>
+      </div>
+      <section id="archive-extra" aria-label="Источники и материалы к записи" hidden></section>
+      <div class="pager"><button type="button" id="reader-prev">← Предыдущий</button><button type="button" id="reader-next">Следующий →</button></div>
+    </article>
+    <div role="status" aria-live="polite" aria-atomic="true" id="status"></div>
+  </div>
+</main>
+<dialog id="scan" aria-labelledby="scan-title" aria-describedby="scan-caption">
+  <div class="scan-head"><h2 id="scan-title">Скан документа</h2><button type="button" id="scan-close" aria-label="Закрыть скан">Закрыть ×</button></div>
+  <div id="scan-stage" tabindex="0" aria-label="Область просмотра скана"><div id="scan-canvas"><img id="scan-img" alt=""><span id="scan-mark" hidden></span></div></div>
+  <div class="scan-foot"><div class="scan-controls"><button type="button" id="scan-zoom-out" aria-label="Уменьшить масштаб">−</button><span id="scan-zoom-level">100%</span><button type="button" id="scan-zoom-in" aria-label="Увеличить масштаб">+</button></div><p id="scan-caption"></p></div>
+</dialog>
+<script src="archive.js"></script>
+<script src="daily.js"></script>
+<script src="media.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

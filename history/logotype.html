@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090d"><title>Эфир 1993 — Октябрь 1993</title>
+<style>
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+:root{color-scheme:dark;--frame:#616476;--paper:#ffdab0;--yellow:#ffe326;--green:#7cf686;--mono:Consolas,"Courier New",monospace}
+body{margin:0;background:#09090d;color:#f2f1fa;font:16px/1.48 "Segoe UI",Arial,sans-serif}
+body:has(dialog[open]){overflow:hidden}
+button,input,select,a{font:inherit}
+button{cursor:pointer}
+button,a,input,select{touch-action:manipulation}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{width:min(calc(100% - 32px),max(800px,calc((100svh - 84px)*1.5)),1536px);margin:clamp(8px,1.3vh,16px) auto 24px}
+.proof{position:relative;aspect-ratio:3/2;width:100%;isolation:isolate}
+.scene{display:block;width:100%;height:100%}
+.print-stock{position:absolute;left:3.33%;top:9.57%;width:32.02%;height:14.71%;border-radius:5.3% / 16%;overflow:hidden;background-color:#fbd3a7;background-image:url(images/png-ecb2016dd184.png);background-size:10.5% 17.1%}
+.print-mark{display:block;position:relative;margin:0 auto;height:100%;aspect-ratio:754/280;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 98.8%,72% 98.8%,71.4% 96.3%,70% 98.8%,66% 95%,65% 98.8%,62.5% 98.8%,61.5% 96%,61% 98.8%,42% 98.8%,42% 87%,0 87%);mask-image:url(images/png-4e2227fa88f7.png);mask-size:100% 100%}
+.print-mark img{display:block;position:absolute;max-width:none;width:203.71353%;height:auto;left:-1.72414%;top:-.71429%;pointer-events:none}
+.hotspots{position:absolute;inset:0}
+.zone{position:absolute;display:block;border:0;border-radius:2px;background:transparent}
+.zone:hover,.zone:focus-visible{outline:2px dashed #fff;outline-offset:-3px;box-shadow:inset 0 0 0 4px #232427ad;background:#ffffff0d}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 1px}
+.controls p{margin:0;color:#c9cbd2;font-size:14px}
+.tools{display:flex;gap:7px;flex:none}
+.tools button,.return-screen{min-height:42px;padding:8px 12px;background:#14151e;color:#eeeef5;border:1px solid #545664;border-radius:3px}
+.tools button:first-child{color:var(--green);border-color:#537a5b}
+.tools button:hover,.return-screen:hover{background:#222432}
+.mobile-nav{display:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+dialog{width:min(760px,calc(100% - 24px));max-height:90dvh;padding:0;overflow:auto;color:#f3f4ff;background:#111220;border:2px solid #6465bb;border-radius:3px;box-shadow:0 12px 70px #000b}
+dialog::backdrop{background:#060710df}
+#sheet{padding:clamp(16px,3.4vw,34px)}
+.dhead,.search-controls,.origin{display:flex;align-items:center;gap:10px}
+.dhead{justify-content:space-between;padding:0 0 10px;border-bottom:1px solid #66658e;font:700 15px/1.25 var(--mono);color:var(--yellow)}
+.dhead button,.back{color:var(--yellow);background:#1c1e30;border:1px solid #686a82;border-radius:2px;padding:8px 12px;min-height:44px}
+h1{font:700 clamp(24px,3vw,34px)/1.13 var(--mono);letter-spacing:-.04em;color:var(--yellow);margin:22px 0 15px;overflow-wrap:anywhere}
+a{color:var(--green);text-underline-offset:.18em}
+#read p{margin:10px 0 15px}
+#date,.matches small{color:#d6d1a9}
+#read figure{margin:20px 0}#read figure img{max-width:100%;max-height:350px;display:block;margin:0 auto;object-fit:contain}
+#read figcaption,.provenance{font-size:14px;color:#c7c8d9;line-height:1.48}
+blockquote{border-left:3px solid var(--yellow);margin:20px 0;padding:8px 16px;font:italic 22px/1.33 Georgia,serif}
+.origin{flex-wrap:wrap;gap:12px 20px;margin:20px 0}
+.search-controls{flex-wrap:wrap}
+.search-controls input{flex:1 1 230px;min-width:0}
+.search-controls input,.search-controls select{color:#f3f4ff;border:1px solid #83849b;background:#1d1e33;padding:9px;min-height:44px;border-radius:2px}
+.count{margin:15px 0 4px;font-weight:650}
+.matches{list-style:none;padding:0;margin:0}
+.matches button{width:100%;text-align:left;border:0;border-bottom:1px solid #444659;background:transparent;color:#f3f4ff;padding:10px 2px;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:48px}
+.matches button:hover{background:#202136}
+.matches small{font-size:14px}
+#zoom{width:min(98vw,1580px);max-width:none;max-height:96dvh;border-color:#494b58;background:#09090d}
+.zoom-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 10px;background:#12131c;color:#c9cbd2;font-size:14px}
+.zoom-scroll{max-height:calc(94dvh - 65px);overflow:auto;overscroll-behavior:contain}
+.zoom-scroll .proof{width:max(100%,950px)}
+@media(max-width:760px){
+.wrap{width:calc(100% - 16px);margin:9px auto 18px}
+.controls{padding:10px 0 4px}.controls p{display:none}
+.tools{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);width:100%;gap:7px}
+.tools button{min-height:44px;padding:7px}
+.mobile-nav{display:block;margin:16px 0 0}
+.mobile-nav h2{font:700 16px/1.2 var(--mono);margin:0 0 8px;color:#dbdbe6}
+.mobile-picks{display:grid;border-top:1px solid #4b4d59}
+.mobile-picks button{display:grid;grid-template-columns:48px minmax(0,1fr) 14px;align-items:center;gap:12px;border:0;border-bottom:1px solid #41434e;background:transparent;color:#f3f3fc;min-height:49px;text-align:left;padding:7px 9px 7px 2px;font-size:16px}
+.mobile-picks button span:first-child{background:#f9df2e;color:#121117;font:700 17px/1.1 var(--mono);padding:3px;text-align:center}
+.mobile-picks button::after{content:"›";font-size:22px;color:#e0d876;justify-self:end}
+.mobile-picks button:hover{background:#1c1e28}
+.search-controls{display:grid;grid-template-columns:1fr}
+.matches button{display:grid;gap:2px}.dhead{align-items:center}
+dialog{max-height:94dvh}.zoom-bar span{max-width:54%;font-size:12px}
+}
+</style></head><body>
+<main class="wrap" aria-label="Эфир 1993. Телетекст за октябрь">
+<div id="screen-home"><div class="proof" id="screen">
+<img class="scene" id="art-txt" width="1536" height="1024" src="images/png-86d82df1d1b3.png" alt="Октябрь 1993. В меню телетекста выбрана страница 203 «Тульская сцена». Анонс статьи «Таких бы театров, да побольше», «Тула вечерняя», 16 октября.">
+<div class="print-stock" role="img" aria-label="Эфир 1993"><span class="print-mark"><img id="journal-mark" src="images/png-683fcc450110.png" alt="" width="1536" height="1024"></span></div>
+<nav class="hotspots" id="zones" aria-label="Выбор страницы телетекста"></nav></div></div>
+<div class="controls"><p>Выберите строку или наберите 201, 202, 203 на клавиатуре.</p><div class="tools"><button id="search-open" type="button">Найти в архиве</button><button id="expand" type="button">Увеличить экран</button></div></div>
+<nav class="mobile-nav" aria-label="Страницы выпуска"><h2>Страницы выпуска</h2><div class="mobile-picks" id="touch"></div></nav>
+</main>
+<dialog id="box" aria-label="Архив"><div id="sheet"><div class="dhead"><strong id="dlabel"></strong><button id="dismiss" type="button">К экрану ×</button></div>
+<section id="find"><h1>Найти в архиве</h1><div class="search-controls"><input id="query" type="search" aria-label="Тема, город, дата или название" placeholder="Тема, город, дата или название"><select id="kind" aria-label="Вид материала"><option value="">Все материалы</option><option value="document">Документы</option><option value="press">Пресса и листовки</option><option value="photo">Фотографии</option><option value="video">Кинохроника</option><option value="artifact">Предметы</option></select></div><p class="count" id="count" aria-live="polite"></p><ul class="matches" id="matches"></ul></section>
+<section id="read" hidden><h1 id="headline" tabindex="-1"></h1><p id="date"></p><p id="summary"></p><blockquote id="quote" hidden></blockquote><figure id="pictured" hidden><img id="illustration" alt=""><figcaption id="credit"></figcaption></figure><p id="detail"></p><p class="provenance" id="source"></p><div class="origin"><a id="primary" target="_blank" rel="noopener noreferrer">Открыть источник ↗</a><a id="related" target="_blank" rel="noopener noreferrer" hidden></a><a id="lic" target="_blank" rel="noopener noreferrer" hidden>Лицензия ↗</a></div><button type="button" class="back" id="go-back" hidden>← К результатам поиска</button></section></div></dialog>
+<dialog id="zoom" aria-label="Увеличенный экран телетекста"><div class="zoom-bar"><span>Выберите строку на экране.</span><button type="button" class="return-screen" id="shrink">Закрыть ×</button></div><div class="zoom-scroll" id="zoom-panel"></div></dialog>
+<script id="records" type="application/json">[{"id":"banknote-1993","title":"Тысяча рублей образца 1993 года","type":"artifact","typeLabel":"Предмет эпохи","date":"Образец 1993","summary":"Оборотная сторона банкноты Банка России номиналом 1000 рублей — материальный документ денежного обращения девяностых.","detail":"Оборот: панорама Кремля и собор Василия Блаженного. Изображение предмета не свидетельствует о конкретной покупке.","source":"Wikimedia Commons / скан денежного знака Банка России","originalUrl":"https://commons.wikimedia.org/wiki/File:Banknote_1000_rubles_(1993)_back.jpg","imageData":"images/webp-a81d97283896.webp","credit":"Банк России; собственный скан Kostya Wiki, опубликован 6 августа 2007 / Wikimedia Commons","contextUrl":"https://cbr.ru/cash_circulation/spravka-o-banknotnom-obraschenii-v-rossii/","contextLabel":"Банк России о банкнотном обращении"},{"id":"referendum-april","title":"Бюллетень апрельского референдума","type":"document","typeLabel":"Документ","date":"25.04.1993","summary":"Первый из четырёх бюллетеней всероссийского референдума — вопрос о доверии президенту Б. Н. Ельцину.","detail":"Подлинный бюллетень от 25 апреля 1993 года. В архиве представлено изображение только первого вопроса, а не комплект всех четырёх бюллетеней.","source":"Wikimedia Commons / официальный бюллетень Российской Федерации","originalUrl":"https://commons.wikimedia.org/wiki/File:Russian_government_referendum,_1993.jpg","imageData":"images/webp-87e721468003.webp","credit":"Российская Федерация; цифровая копия Wikimedia Commons","contextUrl":"https://base.garant.ru/6313710/","contextLabel":"Постановление о проведении референдума"},{"id":"decree-1400","title":"Указ президента № 1400","type":"document","typeLabel":"Документ","date":"21.09.1993","summary":"«О поэтапной конституционной реформе в Российской Федерации» — архивный подлинник с подписью Бориса Ельцина.","detail":"Президентская библиотека описывает семь цифровых изображений листов 118–124 дела 36 фонда 92 Архива Президента РФ. Указ подписан 21 сентября 1993 года в 20:00.","source":"Президентская библиотека / Архив Президента РФ, ф. 92, оп. 1, д. 36, л. 118–124","originalUrl":"https://www.prlib.ru/item/353407","credit":"Архив Президента Российской Федерации / Президентская библиотека","contextUrl":"https://base.garant.ru/172280/","contextLabel":"Опубликованный текст указа"},{"id":"court-opinion","title":"Заключение Конституционного суда","type":"document","typeLabel":"Документ","date":"21.09.1993","summary":"Заключение № З-2 о конституционности действий президента в связи с указом № 1400.","detail":"Машинописная копия заключения, а не подписной подлинник. Президентская библиотека описывает подписи В. Д. Зорькина и Ю. Д. Рудкина; Архив Президента РФ, ф. 92, оп. 3, д. 241, л. 244–245.","source":"Президентская библиотека / Архив Президента РФ, Ф. 92, Оп. 3, Д. 241","originalUrl":"https://www.prlib.ru/item/333335","credit":"Архив Президента Российской Федерации / Президентская библиотека","contextUrl":"https://www.prlib.ru/item/353407","contextLabel":"Сопоставить с указом № 1400"},{"id":"october-photo","title":"Дом Советов после октябрьских событий","type":"photo","typeLabel":"Фотография","date":"Октябрь 1993","summary":"Фотография повреждённого московского Дома Советов в октябре 1993 года.","detail":"Авторская фотография из семейного архива участника поездки в Москву. Цифровая версия в Commons была кадрирована и обработана по цвету. Точный день съёмки не указан.","source":"Wikimedia Commons / архив пользователя Chrislatondresse","originalUrl":"https://commons.wikimedia.org/wiki/File:White_House-3.JPG","imageData":"images/webp-58f74a379c31.webp","credit":"Отец пользователя Chrislatondresse (имя не указано); публикация Chrislatondresse, обработка TVJunkie, 2012 / Wikimedia Commons","contextUrl":"https://www.prlib.ru/node/433737","contextLabel":"Видеосвидетельство событий 4–7 октября"},{"id":"october-film","title":"«Россия... Осень 93-го»: кадры октября","type":"video","typeLabel":"Видеосъёмка","date":"04–07.10.1993","summary":"Архивная видеосъёмка событий в Москве: баррикады, Дом Советов и участники противостояния.","detail":"Съёмка: Москва, 4–7 октября 1993 года. Кадры вошли в фильм 1994 года; цветная звуковая подборка длительностью 2 минуты 34 секунды опубликована Президентской библиотекой в 2011 году. Редактор-составитель — Т. И. Дьяконова.","source":"Президентская библиотека / видеокаталог","originalUrl":"https://www.prlib.ru/node/433737","credit":"Президентская библиотека; редактор-составитель Т. И. Дьяконова"},{"id":"constitution-ballot","title":"Бюллетень по проекту Конституции","type":"document","typeLabel":"Документ","date":"12.12.1993","summary":"Подлинный бюллетень декабрьского всенародного голосования с вариантами «Да» и «Нет».","detail":"На сайте использована фотография документа 1993 года, сделанная в 2012 году. Дата самого документа и дата цифровой фотографии не смешиваются.","source":"Wikimedia Commons / фотокопия документа 1993 года","originalUrl":"https://commons.wikimedia.org/wiki/File:Бюллетень_для_голосования_по_конституции_РФ.jpg","imageData":"images/webp-cd32834dca4d.webp","credit":"Lesless, фотография документа 14 октября 2012 / Wikimedia Commons","contextUrl":"https://www.prlib.ru/item/725261","contextLabel":"Другой экземпляр бюллетеня · Санкт-Петербург"},{"id":"december-voting","title":"Голосование в школе № 81 Москвы","type":"photo","typeLabel":"Фотография","date":"12.12.1993","summary":"12 декабря 1993 года, школа № 81 Кунцевского района Москвы. Снимок показывает обстановку на участке; по нему нельзя установить, как голосовали изображённые люди.","detail":"Снимок С. Поминова хранится в Главархиве Москвы. Сохранён исторический кадр: избиратели, столы комиссии, ящик для голосования.","source":"Главархив Москвы / Mos.ru / Wikimedia Commons","originalUrl":"https://commons.wikimedia.org/wiki/File:Голосование_на_референдуме_по_Конституции_РФ.jpg","imageData":"images/webp-c8744953b6a0.webp","credit":"С. Поминов / Главархив Москвы / Mos.ru","contextUrl":"https://www.mos.ru/news/item/99953073/","contextLabel":"Публикация Правительства Москвы","licenseUrl":"https://creativecommons.org/licenses/by/4.0/"},{"id":"election-leaflets","title":"Листовки первых выборов в Госдуму","type":"press","typeLabel":"Агитация","date":"Кампания 1993","summary":"Коллекция политической агитации из фондов Государственной публичной исторической библиотеки.","detail":"Две отдельные листовки из фонда ГПИБ: движение «Женщины России» и КПРФ, [Москва], [1993]. По ссылкам — библиографические описания.","source":"Государственная публичная историческая библиотека России","originalUrl":"https://merge.dlibrary.org/ru/nodes/200013430-golosuyte-za-kandidatov-dvizheniya-zhenschiny-rossii","credit":"ГПИБ России / фонды агитационной печати","contextUrl":"https://merge.dlibrary.org/ru/nodes/200013412-uvazhaemye-izbirateli-kommunisticheskaya-partiya-rossiyskoy-federatsii-partiya-mira-i-stabilnosti","contextLabel":"Описание листовки КПРФ"},{"id":"cik-resolution","title":"Постановление ЦИК № 142","type":"document","typeLabel":"Документ","date":"20.12.1993","summary":"Постановление об итогах всенародного голосования: за принятие Конституции — 58,4% участников.","detail":"Скан постановления ЦИК Российской Федерации № 142 от 20 декабря 1993 года. Цифры из текста документа: 32 937 630 голосов «за» и 23 431 333 «против». Электронная перепечатка бюллетеня ЦИК 1994 года помечена издателем как неофициальная.","source":"ЦИК Российской Федерации / цифровая копия Wikimedia Commons","originalUrl":"https://commons.wikimedia.org/wiki/File:Постановление_ЦИК_РФ_«О_результатах_всенародного_голосования_по_проекту_Конституции_Российской_Федерации».jpg","imageData":"images/webp-568a308b0bfc.webp","credit":"Центральная избирательная комиссия РФ / Wikimedia Commons","contextUrl":"https://bcik.rf.org.ru/1994/1/","contextLabel":"Бюллетень ЦИК 1994 года (неофициальная электронная версия)"},{"id":"tula-theatre","title":"«Таких бы театров, да побольше»","type":"press","typeLabel":"Библиографическая запись","date":"16.10.1993","summary":"С. Гончаров писал о тульском театре «У Толстовской заставы». Статья вышла в газете «Тула вечерняя» 16 октября 1993 года.","detail":"Отдел краеведения Центральной городской библиотеки имени Л. Н. Толстого включил фрагмент статьи в дайджест «Лев Толстой на тульской сцене». В архиве доступна выдержка. Оригинальную полосу ещё предстоит найти.","source":"МУК «Тульская библиотечная система» · Центральная городская библиотека им. Л. Н. Толстого","originalUrl":"https://tbclib.ru/assets/template/resourses/kraeved/tolstoy_na_tulskoy_scene.pdf","quote":"Ведь моральная, дружеская поддержка очень нужна этому театру.","credit":"С. Гончаров / «Тула вечерняя»"},{"id":"spare-parts","title":"«Почем запчасти?»","type":"press","typeLabel":"Журнальная статья","date":"Октябрь 1993","summary":"В октябрьском выпуске В. Субботин сравнивает московские коммерческие цены на запчасти. Таблица отражает июль 1993 года.","detail":"Изменение цен автор оценивал в рублях, а значения в таблице пересчитал в доллары США. Для неё журнал указал курс 1100 рублей за доллар.","source":"«За рулём», № 10, октябрь 1993 года, с. 10–11","originalUrl":"https://www.zr.ru/archive/zr/1993/10/pochiem-zapchasti","credit":"В. Субботин / «За рулём»"}]</script>
+<script>
+'use strict';
+const records = JSON.parse(document.getElementById('records').textContent);
+const get = id => document.getElementById(id);
+const archive = new Map(records.map(record => [record.id, record]));
+const contents = [
+  {id:'october-photo', name:'Дом Советов', code:'201', rect:[3,28.5,94,7.7]},
+  {id:'spare-parts', name:'Почем запчасти?', code:'202', rect:[3,36.9,94,8]},
+  {id:'tula-theatre', name:'Тульская сцена', code:'203', rect:[3,46.1,94,8.5]}
+];
+let digits = '', lastDigit = 0, fromResults = false, activeResult = '', priorFocus = null;
+function titleFor(r){return r.id==='october-photo'?'Дом Советов после октябрьских событий':r.title}
+function openBox(){
+ if(!get('box').open){priorFocus=document.activeElement;get('box').showModal()}
+}
+function openFind(){
+ digits='';fromResults=false;get('find').hidden=false;get('read').hidden=true;openBox();refreshFind();get('query').focus();
+}
+function fold(str){return str.toLowerCase().replaceAll('ё','е').replace(/[«».,:;!?–—/()]/g,' ').replace(/\s+/g,' ').trim()}
+const monthNames=['','январь января','февраль февраля','март марта','апрель апреля','май мая','июнь июня','июль июля','август августа','сентябрь сентября','октябрь октября','ноябрь ноября','декабрь декабря'];
+const searchData=new Map(records.map(r=>{
+ const date=r.date.match(/(\d\d)\.(\d\d)\.(\d{4})/);
+ const extra=date?date[1]+' '+monthNames[Number(date[2])]+' '+date[3]:'';
+ const names={photo:'фото фотография фотографии',press:'пресса газета журнал агитация',document:'документ документы',video:'видео телевидение фильм кинохроника',artifact:'предмет предметы деньги'};
+ return [r.id,fold([r.title,r.typeLabel,r.date,extra,r.summary,r.detail,r.credit,r.source,names[r.type],contents.find(x=>x.id===r.id)?.name||'',contents.find(x=>x.id===r.id)?.code||''].filter(Boolean).join(' '))]
+}));
+function refreshFind(){
+ const words=fold(get('query').value).split(' ').filter(Boolean),kind=get('kind').value;
+ const found=records.filter(r=>(!kind||r.type===kind)&&words.every(w=>searchData.get(r.id).includes(w)));
+ get('count').textContent=found.length?'Найдено '+found.length+' из '+records.length:'Совпадений нет. Измените запрос или вид материала.';
+ const list=get('matches');list.replaceChildren();for(const r of found){
+ const li=document.createElement('li'),btn=document.createElement('button'),name=document.createElement('span'),meta=document.createElement('small');btn.type='button';name.textContent=titleFor(r);meta.textContent=r.date+' · '+r.typeLabel;btn.dataset.result=r.id;btn.append(name,meta);btn.addEventListener('click',()=>showRecord(r.id,true));li.append(btn);list.append(li)}
+}
+function showRecord(id,fromSearch=false){
+ const r=archive.get(id);if(!r)return;digits='';fromResults=fromSearch;activeResult=id;get('find').hidden=true;get('read').hidden=false;
+ get('headline').textContent=titleFor(r);get('date').textContent=r.date+' · '+r.typeLabel;get('summary').textContent=r.summary;
+ get('quote').hidden=!r.quote;get('quote').textContent=r.quote?'«'+r.quote.replace(/\.$/,'')+'».':'';
+ get('detail').textContent=r.detail;get('source').textContent=r.source;get('primary').href=r.originalUrl;
+ get('primary').textContent=id==='tula-theatre'?'Открыть библиотечный дайджест ↗':id==='spare-parts'?'Открыть полосы «За рулём» ↗':r.type==='video'?'Смотреть в Президентской библиотеке ↗':'Открыть источник ↗';
+ get('related').hidden=!r.contextUrl;if(r.contextUrl){get('related').href=r.contextUrl;get('related').textContent=(r.contextLabel||'Материал по теме')+' ↗'}
+ get('lic').hidden=!r.licenseUrl;if(r.licenseUrl)get('lic').href=r.licenseUrl;
+ get('pictured').hidden=!r.imageData;if(r.imageData){get('illustration').src=r.imageData;get('illustration').alt=r.title;get('credit').textContent=r.credit}else get('illustration').removeAttribute('src');
+ get('go-back').hidden=!fromSearch;openBox();get('box').scrollTop=0;get('headline').focus({preventScroll:true});
+}
+function backToFind(){openFind();const result=get('matches').querySelector('[data-result="'+activeResult+'"]');if(result)result.focus()}
+function addZone(label, rect, action) {
+  const zone = document.createElement('button');
+  const [left, top, width, height] = rect;
+  Object.assign(zone.style, {left:left+'%', top:top+'%', width:width+'%', height:height+'%'});
+  zone.type = 'button';
+  zone.className = 'zone';
+  zone.title = label;
+  zone.setAttribute('aria-label', label);
+  zone.addEventListener('click', action);
+  get('zones').append(zone);
+}
+for (const item of contents) {
+  const action = () => showRecord(item.id);
+  addZone(item.code+' '+item.name, item.rect, action);
+  const button = document.createElement('button');
+  button.type = 'button';
+  for (const value of [item.code, item.name]) {
+    const part = document.createElement('span');
+    part.textContent = value;
+    button.append(part);
+  }
+  button.setAttribute('aria-label', item.code+' '+item.name);
+  button.addEventListener('click', action);
+  get('touch').append(button);
+}
+addZone('Выбрать страницу 203', [3.5,84,50.5,11], () => showRecord('tula-theatre'));
+addZone('Назад к указателю архива', [56.7,84,40.5,11], openFind);
+get('dlabel').textContent = 'Телетекст · Эфир 1993';
+get('search-open').addEventListener('click',openFind);get('query').addEventListener('input',refreshFind);get('kind').addEventListener('change',refreshFind);get('query').addEventListener('keydown',e=>{if(e.key==='Enter'){const results=get('matches').querySelectorAll('button');if(results.length===1){e.preventDefault();results[0].click()}}});
+get('go-back').addEventListener('click',backToFind);get('dismiss').addEventListener('click',()=>get('box').close());
+get('box').addEventListener('cancel',e=>{if(!get('read').hidden&&fromResults){e.preventDefault();backToFind()}});
+get('box').addEventListener('close',()=>{if(priorFocus?.isConnected)priorFocus.focus({preventScroll:true})});
+get('expand').addEventListener('click', () => {
+  get('zoom-panel').append(get('screen'));
+  get('zoom').showModal();
+  get('zoom-panel').scrollTo(0,0);
+});
+get('shrink').addEventListener('click', () => get('zoom').close());
+get('zoom').addEventListener('close', () => {
+  get('screen-home').append(get('screen'));
+  get('expand').focus({preventScroll:true});
+});
+document.addEventListener('keydown', event => {
+  if (get('box').open || event.ctrlKey || event.metaKey || event.altKey || !/^\d$/.test(event.key)) return;
+  const now = Date.now();
+  digits = (now-lastDigit>2000 ? '' : digits) + event.key;
+  lastDigit = now;
+  if (digits.length === 3) {
+    const item = contents.find(item => item.code === digits);
+    digits = '';
+    if (item) showRecord(item.id);
+  }
+});
+</script></body></html>
